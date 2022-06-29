@@ -1,0 +1,135 @@
+/* CUSTOM PROPY */
+:root {
+    --fonts:'Trispace', 'Arial', sans-serif;
+}
+
+/* FONTS */
+@font-face {
+    font-family: 'Trispace';
+    src: url('../fonts/Trispace-Regular.woff2') format('woff2'),
+    url('../fonts/Trispace-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trispace';
+    src: url('../fonts/Trispace-Bold.woff2') format('woff2'),
+    url('../fonts/Trispace-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trispace';
+    src: url('../fonts/Trispace-Thin.woff2') format('woff2'),
+    url('../fonts/Trispace-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+/* GLOBAL-STYLE */
+html {
+    box-sizing: border-box;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    font-family: var(--fonts);
+    background-color: #222;
+    color: #fff;
+}
+
+*:focus {
+    outline-color: rgb(25, 211, 81);                             
+    outline-offset: 2px;
+    outline-width: 3px;
+    outline-style: dashed;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* .visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+} */
+
+.container {
+    width: 100%;
+    max-width: 1120px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wrapper {
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+}
+
+.rings {
+    position: absolute;
+width: 100px;
+height: 100px;
+border: 2px solid transparent;
+border-radius: 50%;
+top: 300px;
+border-top-color: aqua;
+animation: anime 2s infinite;
+}
+
+@keyframes anime {
+    0%
+    {
+        transform: rotate(0deg);
+    }
+100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.text {
+    position: absolute;
+    text-transform: uppercase;
+    top: 500px;
+    right: 682px;
+    font-size: 35px;
+    letter-spacing: 5px;
+margin: 0;
+}
