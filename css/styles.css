@@ -148,9 +148,19 @@ img {
     background-color: rgb(211, 45, 29);
     top: 250px;
     z-index: -1;
-  }
-  .heart-shape:before,
-  .heart-shape:after{
+    animation: animes 8s infinite;
+}
+
+@keyframes animes {
+    100%
+    {
+        transform: scale(9);
+    }
+
+}
+
+.heart-shape:before,
+.heart-shape:after{
     position: absolute;
     width: 200px;
     height: 200px;
@@ -160,12 +170,14 @@ img {
     -o-border-radius: 50%;
     border-radius: 50%;
     background-color: rgb(211, 45, 29);
-  }
-  .heart-shape:before{
+}
+
+.heart-shape:before{
     bottom: 0px;
     left: -100px;
-  }
-  .heart-shape:after{
+}
+
+.heart-shape:after{
     top: -100px;
     right: 0px;
-  }
+}
